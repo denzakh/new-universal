@@ -41,12 +41,12 @@
   <main class="main">
     <section class="promo">
       <div class="container">
-        <p class="promo__number">4</p>
-        <p class="promo__text"></p>
-        <p class="promo__text"></p>
-        <p class="promo__text"></p>
         <p class="promo__number">2</p>
-        <p class="promo__text"></p>
+        <p class="promo__text">респектабельных стиля оформления портретов</p>
+        <p class="promo__text">классический</p>
+        <p class="promo__text">премиум</p>
+        <p class="promo__number">4</p>
+        <p class="promo__text">варианта для любого кабинета</p>
       </div>
     </section>
 
@@ -54,72 +54,58 @@
 
       <section class="order">
         <div class="container">
-          <h2 class="order__title">4</h2>
+          <h2 class="order__title">выберите портрет прямо сейчас</h2>
         </div>
         <div class="gallery">
           <div class="container">
             <div class="gallery__items">
-              <div class="gallery__items">1</div>
-              <div class="gallery__items">2</div>
-              <div class="gallery__items">3</div>
-              <div class="gallery__items">4</div>
-              <div class="gallery__items">5</div>
-              <div class="gallery__items">6</div>
+              <div class="gallery__items"><div class="gallery__number">1</div></div>
+              <div class="gallery__items"><div class="gallery__number">2</div></div>
+              <div class="gallery__items"><div class="gallery__number">3</div></div>
+              <div class="gallery__items"><div class="gallery__number">4</div></div>
+              <div class="gallery__items"><div class="gallery__number">5</div></div>
+              <div class="gallery__items"><div class="gallery__number">6</div></div>
             </div>
             <div class="gallery__nav">
-              <button class="gallery__btn  gallery__btn--prev"></button>
-              <button class="gallery__btn  gallery__btn--next"></button>
+              <button class="gallery__btn no-btn gallery__btn--prev"></button>
+              <button class="gallery__btn no-btn gallery__btn--next"></button>
             </div>
           </div>
         </div>
         <div class="order__tabs">
           <div class="container">
+            <div class="order__subtitle">выберите вариант оформления и размер</div>
             <div class="order__molding-tabs">
               <input type="checkbox" name="molding" id="molding-1" checked>
-              <input type="checkbox" name="molding" id="molding-2">
               <label for="molding-1" class="order__molding">
-                <span class="order__tab-header">
-                  A
-                </span><span class="order__tab-text">
-                  описание
-                </span>
+                <span class="order__tab-header">фотобумага</span>
+                <span class="order__tab-text">под стеклом в багете</span>
               </label>
+              <input type="checkbox" name="molding" id="molding-2">
               <label for="molding-2" class="order__molding">
-                <span class="order__tab-header">
-                  A
-                </span><span class="order__tab-text">
-                  описание
-                </span>
+                <span class="order__tab-header">хлопковый холст</span>
+                <span class="order__tab-text">в премиум багете</span>
               </label>
             </div>
             <div class="order__printsize-tabs">
               <input type="checkbox" name="printsize" id="printsize-a4" checked>
-              <input type="checkbox" name="printsize" id="printsize-a3">
-              <input type="checkbox" name="printsize" id="printsize-a2">
               <label for="printsize-a4" class="order__printsize">
-                <span class="order__tab-header">
-                  A
-                </span><span class="order__tab-text">
-                  описание
-                </span>
+                <span class="order__tab-header">А4</span>
+                <span class="order__tab-text">(21х30 см)</span>
               </label>
+              <input type="checkbox" name="printsize" id="printsize-a3">
               <label for="printsize-a3" class="order__printsize">
-                <span class="order__tab-header">
-                  A
-                </span><span class="order__tab-text">
-                  описание
-                </span>
+                <span class="order__tab-header">А3</span>
+                <span class="order__tab-text">(30х42 см)</span>
               </label>
+              <input type="checkbox" name="printsize" id="printsize-a2" disabled>
               <label for="printsize-a2" class="order__printsize">
-                <span class="order__tab-header">
-                  A
-                </span><span class="order__tab-text">
-                  описание
-                </span>
+                <span class="order__tab-header">А2</span>
+                <span class="order__tab-text">(42х60 см)</span>
               </label>
             </div>
             <div class="order__signature-tabs">
-              <label class="order__signature">
+              <label class="order__signature">подпись Путина
                 <input type="checkbox" name="signature" id="signature">
               </label>
             </div>
@@ -131,16 +117,16 @@
           <h2 class="delivery__title">Оставьте заявку сейчас и получите бесплатную доставку!</h2>
           <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
           <div class="delivery__client-contacts">
-            <input class="delivery__client delivery__client--email" type="client-email" name="client-email" id="client-email">
-            <input class="delivery__client delivery__client--tel" type="client-tel" name="client-tel" id="client-tel">
+            <input class="delivery__client delivery__client--email" type="client-email" name="client-email" id="client-email" placeholder="введите ваш email">
+            <input class="delivery__client delivery__client--tel" type="client-tel" name="client-tel" id="client-tel" placeholder="введите номер телефона">
           </div>
           <div class="delivery__order">
             <div class="delivery__prace">
               <div class="delivery__price-title">Цена:</div>
-              <div class="delivery__price-value">
-                <span class="delivery__price-rub">руб</span>
+              <div class="delivery__price-value">1750
+                <span class="delivery__price-rub">ру</span>
               </div>
-              <div class="delivery__price-free"></div>
+              <div class="delivery__price-free"><sup>*</sup> доставка бесплатно</div>
             </div>
             <div class="delivery__btn-block">
               <button class="delivery__btn-order btn">заказать портрет сейчас</button>
@@ -155,7 +141,7 @@
       <div class="footer__textline">бесплатная доставка при заказе сегодня до&nbrs;23:00</div>
       <div class="footer__time">
         <div class="footer__time-clock">00:00:00:00</div>
-        <div class="footer__time-hurry">Спешите</div>
+        <div class="footer__time-hurry">Спешите!</div>
       </div>
     </footer>
   </main>
@@ -163,7 +149,6 @@
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/owl.carousel/dist/owl.carousel.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js js/main.min.js -->

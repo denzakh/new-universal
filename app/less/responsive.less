@@ -1,0 +1,57 @@
+@media screen and (min-width: @screen-lg1300) {
+  .left-on-wide-screen{
+    padding-right: 15vw;
+  }  
+}
+
+@media screen and (min-width: @laptop-min) {
+  .generate-columns(16);
+  .container{
+    width: @container-laptop;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @import url(header.less);
+  @import url(promo.less);
+  @import url(steps.less);
+  @import url(decision.less);
+  @import url(order.less);
+  @import url(sloganbox.less);
+  @import url(warranty.less);
+  @import url(next.less);
+  @import url(popup.less);
+
+}
+
+@media screen and (max-width: @phone-max) {
+  .generate-columns(12);
+  .container{
+    padding-left: 7px;
+    padding-right: 7px;
+    max-width: 480px;
+    min-width: @phone-min;
+  }
+
+  @import url(header_mobile.less);
+  @import url(promo_mobile.less);
+  @import url(steps_mobile.less);
+  @import url(decision_mobile.less);
+  @import url(order_mobile.less);
+  @import url(sloganbox_mobile.less);
+  @import url(warranty_mobile.less);
+  @import url(next_mobile.less);
+  @import url(popup_mobile.less);
+}
+
+@media (max-width: @phone-max) {
+  .desktop-only{
+    display: none;
+  }  
+}
+
+@media (min-width: @laptop-min) {
+  .mobile-only{
+    display: none;
+  }  
+}

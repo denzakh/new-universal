@@ -1,0 +1,21 @@
+{
+  "name": "bower-components",
+  "version": "0.1.0",
+  "authors": [
+    "Denis Zakharchenko <den.zakh@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "^4.2.0",
+    "jquery": "2.1.4"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/js/bootstrap.min.js",
+        "./dist/css/bootstrap.min.css",
+        "./dist/css/bootstrap-theme.min.css"
+      ]
+    }
+  }
+}

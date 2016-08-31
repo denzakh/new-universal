@@ -1,0 +1,152 @@
+.page-header{
+  position: absolute;
+  width: 100%;
+  min-height: 123px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  & .container{
+    position: relative;  
+    width: 100%;
+  }
+
+  & .range {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+}
+
+.fast-phone{
+  .col-5;
+  float: right;
+  text-align: right;
+  padding-right: 20px;
+
+  &__link{
+    display: block;
+    padding-top: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 50px;
+    letter-spacing: 5px; 
+    color: #fffe00;
+  }
+
+  &__slogan{
+    .proxima(lighter);
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: -4px;
+    color: #fffe00;
+  }
+
+}
+
+.header-logo{
+  width: 400px;
+
+
+  &__logo {
+    float: left;
+    width: 150px;
+    height: 123px;
+    background: #fff;
+  }
+
+  &__slogan {
+    float: left;
+    width: 170px;
+    padding-top: 30px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+    .proxima(ligthter);
+    font-size: 18px;
+    line-height: 135%;
+    background-color: #222;
+    color: #fff;    
+    height: 123px;    
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+  }
+
+  &:after {
+    content: '';
+    clear: both;;
+  }
+
+}
+
+
+// верхняя плашка
+.decision-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 90px;
+  background-color: #28dcb4;
+  padding: 10px 20px;
+  .proxima-cond(lighter);
+  font-size: 22px;
+  line-height: 35px;
+  color: #fff;  
+  letter-spacing: 2.7px;
+  border-bottom: 2px solid #413834;
+  box-shadow: 0 1px 22px 0 rgba(25,25,25,0.15);
+  opacity: 0;
+  // transform: scaleY(0);
+  // transition: transform 0.8s ease;
+  transition: opacity 0.8s ease;
+
+  &__block {
+    max-width: 915px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__text, &__contacts, &__phone, &__social{
+    display: inline;
+  }
+  
+  &__text {
+    display: block;
+  }
+
+  &__phone, &__social, &__sociallink{
+    color: @c-blue;
+    text-decoration: none;
+    position: relative;    
+  }
+
+  &__sociallink:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: @c-blue;
+  }
+
+  &__sociallink:hover:after {
+    display: none;
+  }
+
+}
+
+.decision-header--scroll{
+  // top: 0;
+  opacity: 1;
+}
+
+.decision-header--stop {
+  position: absolute;
+  // +top 
+  transition: none;
+}

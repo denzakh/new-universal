@@ -18,16 +18,16 @@
     <div class="header__topline">
       <div class="container">
         <nav class="header__nav">
-          <div class="header__nav-item">выбор портрета</div>
-          <div class="header__nav-item">доставка</div>
-          <div class="header__nav-item">контакты</div>
+          <div class="header__nav-item"><a href="#nav1">выбор портрета</a></div>
+          <div class="header__nav-item"><a href="#nav2">доставка</a></div>
+          <div class="header__nav-item"><a href="#nav3">контакты</a></div>
           <div class="header__nav-item  header__nav-item--tel">8&nbrs;800&nbrs;3334744</div>
         </nav>
       </div>
     </div>
     <div class="header__title-block">
       <div class="container">
-        <h1 class="header__title">официальные портреты президента России с бесплатной доставкой
+        <h1 class="header__title">Официальные портреты президента России с бесплатной доставкой
         </h1>
       </div>
     </div>
@@ -54,9 +54,9 @@
 
       <section class="order">
         <div class="container">
-          <h2 class="order__title">выберите портрет прямо сейчас</h2>
+          <h2 class="order__title">Выберите портрет прямо сейчас</h2>
         </div>
-        <div class="gallery">
+        <div class="gallery" id="nav1">
           <div class="container">
             <div class="gallery__items">
               <div class="gallery__items"><div class="gallery__number">1</div></div>
@@ -105,14 +105,15 @@
               </label>
             </div>
             <div class="order__signature-tabs">
-              <label class="order__signature">подпись Путина
+              <label class="order__signature">
                 <input type="checkbox" name="signature" id="signature">
+                подпись Путина
               </label>
             </div>
           </div>
         </div>
       </section>
-      <section class="delivery">
+      <section class="delivery" id="nav2">
         <div class="conteiner">
           <h2 class="delivery__title">Оставьте заявку сейчас и получите бесплатную доставку!</h2>
           <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
@@ -137,14 +138,16 @@
       </section>
     </form>
 
-    <footer class="footer">
-      <div class="footer__textline">бесплатная доставка при заказе сегодня до&nbrs;23:00</div>
-      <div class="footer__time">
-        <div class="footer__time-clock">00:00:00:00</div>
-        <div class="footer__time-hurry">Спешите!</div>
+    <section class="delivery-promo">
+      <div class="delivery-promo__textline">Бесплатная доставка при заказе сегодня до&nbrs;23:00</div>
+      <div class="delivery-promo__time">
+        <div class="delivery-promo__time-clock">00:00:00:00</div>
+        <div class="delivery-promo__time-hurry">Спешите!</div>
       </div>
-    </footer>
+    </section>
   </main>
+
+  <footer class="footer" id="nav3"></footer>
 
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->

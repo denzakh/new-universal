@@ -14,16 +14,150 @@
   <!-- endbuild -->
 </head>
 <body>
-  <header class="page-header">
-
+  <header class="header">
+    <div class="header__topline">
+      <div class="container">
+        <nav class="header__nav">
+          <div class="header__nav-item">выбор портрета</div>
+          <div class="header__nav-item">доставка</div>
+          <div class="header__nav-item">контакты</div>
+          <div class="header__nav-item  header__nav-item--tel">8&nbrs;800&nbrs;3334744</div>
+        </nav>
+      </div>
+    </div>
+    <div class="header__title-block">
+      <div class="container">
+        <h1 class="header__title">официальные портреты президента России с бесплатной доставкой
+        </h1>
+      </div>
+    </div>
+    <div class="header__advantage-block">
+      <div class="container">
+        <div class="header__advantage header__advantage--1">без предоплаты</div>
+        <div class="header__advantage header__advantage--2">быстрая доставка курьером</div>
+      </div>
+    </div>
   </header>
-  <main class="page-main">
+  <main class="main">
     <section class="promo">
- 
+      <div class="container">
+        <p class="promo__number">4</p>
+        <p class="promo__text"></p>
+        <p class="promo__text"></p>
+        <p class="promo__text"></p>
+        <p class="promo__number">2</p>
+        <p class="promo__text"></p>
+      </div>
     </section>
-<!--     <form class="order" method="#" enctype="multipart/form-data">
- 
-    </form> -->
+
+    <form method="#" enctype="multipart/form-data">
+
+      <section class="order">
+        <div class="container">
+          <h2 class="order__title">4</h2>
+        </div>
+        <div class="gallery">
+          <div class="container">
+            <div class="gallery__items">
+              <div class="gallery__items">1</div>
+              <div class="gallery__items">2</div>
+              <div class="gallery__items">3</div>
+              <div class="gallery__items">4</div>
+              <div class="gallery__items">5</div>
+              <div class="gallery__items">6</div>
+            </div>
+            <div class="gallery__nav">
+              <button class="gallery__btn  gallery__btn--prev"></button>
+              <button class="gallery__btn  gallery__btn--next"></button>
+            </div>
+          </div>
+        </div>
+        <div class="order__tabs">
+          <div class="container">
+            <div class="order__molding-tabs">
+              <input type="checkbox" name="molding" id="molding-1" checked>
+              <input type="checkbox" name="molding" id="molding-2">
+              <label for="molding-1" class="order__molding">
+                <span class="order__tab-header">
+                  A
+                </span><span class="order__tab-text">
+                  описание
+                </span>
+              </label>
+              <label for="molding-2" class="order__molding">
+                <span class="order__tab-header">
+                  A
+                </span><span class="order__tab-text">
+                  описание
+                </span>
+              </label>
+            </div>
+            <div class="order__printsize-tabs">
+              <input type="checkbox" name="printsize" id="printsize-a4" checked>
+              <input type="checkbox" name="printsize" id="printsize-a3">
+              <input type="checkbox" name="printsize" id="printsize-a2">
+              <label for="printsize-a4" class="order__printsize">
+                <span class="order__tab-header">
+                  A
+                </span><span class="order__tab-text">
+                  описание
+                </span>
+              </label>
+              <label for="printsize-a3" class="order__printsize">
+                <span class="order__tab-header">
+                  A
+                </span><span class="order__tab-text">
+                  описание
+                </span>
+              </label>
+              <label for="printsize-a2" class="order__printsize">
+                <span class="order__tab-header">
+                  A
+                </span><span class="order__tab-text">
+                  описание
+                </span>
+              </label>
+            </div>
+            <div class="order__signature-tabs">
+              <label class="order__signature">
+                <input type="checkbox" name="signature" id="signature">
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="delivery">
+        <div class="conteiner">
+          <h2 class="delivery__title">Оставьте заявку сейчас и получите бесплатную доставку!</h2>
+          <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
+          <div class="delivery__client-contacts">
+            <input class="delivery__client delivery__client--email" type="client-email" name="client-email" id="client-email">
+            <input class="delivery__client delivery__client--tel" type="client-tel" name="client-tel" id="client-tel">
+          </div>
+          <div class="delivery__order">
+            <div class="delivery__prace">
+              <div class="delivery__price-title">Цена:</div>
+              <div class="delivery__price-value">
+                <span class="delivery__price-rub">руб</span>
+              </div>
+              <div class="delivery__price-free"></div>
+            </div>
+            <div class="delivery__btn-block">
+              <button class="delivery__btn-order btn">заказать портрет сейчас</button>
+              <div class="delivery__btn-subtext">Заявка Вас ни к чему не обязывает.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <footer class="footer">
+      <div class="footer__textline">бесплатная доставка при заказе сегодня до&nbrs;23:00</div>
+      <div class="footer__time">
+        <div class="footer__time-clock">00:00:00:00</div>
+        <div class="footer__time-hurry">Спешите</div>
+      </div>
+    </footer>
   </main>
 
   <!-- build:js js/vendor.js -->

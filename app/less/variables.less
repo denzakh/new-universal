@@ -1,19 +1,18 @@
 // закомментировать если не юзать бутстрап
-@container-laptop: 960px;
-@container-phone: 320px;
-
 @screen-lg:                   1200px;
 @screen-lg1300:               1300px;
 @screen-xl:                   1600px;
 @screen-xxl:                  1920px;
 
-@laptop-min: @container-laptop;
+// основные размеры
+@container-phone-min: 320px;
+@container-phone-max: 640px;
+@container-desktop-min: 960px;
+@container-desktop-max: 1366px;
 
-// @tablet-min: @container-tablet;
-// @tablet-max: (@container-laptop-wide - 1);
 
-@phone-min: @container-phone;
-@phone-max: (@container-laptop - 1);
+// точка переключения
+@phone-desktop-checkout: 959;
 
 
 @indent-col: 12px;      // растояние между колонками сетки.

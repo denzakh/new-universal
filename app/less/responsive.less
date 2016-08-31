@@ -4,54 +4,41 @@
   }  
 }
 
-@media screen and (min-width: @laptop-min) {
+@media screen and (min-width: @container-desktop-min) {
   .generate-columns(16);
   .container{
-    width: @container-laptop;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-width: @container-desktop-min;
+    max-width: @container-desktop-max;
   }
+  .phone-only{
+    display: none;
+  } 
 
   @import url(header.less);
-  @import url(promo.less);
-  @import url(steps.less);
-  @import url(decision.less);
-  @import url(order.less);
-  @import url(sloganbox.less);
-  @import url(warranty.less);
-  @import url(next.less);
-  @import url(popup.less);
-
 }
 
-@media screen and (max-width: @phone-max) {
+@media screen and (max-width: @phone-desktop-checkout) {
   .generate-columns(12);
   .container{
-    padding-left: 7px;
-    padding-right: 7px;
-    max-width: 480px;
-    min-width: @phone-min;
+    min-width: @container-phone-min;
+    max-width: @container-phone-max;
   }
-
-  @import url(header_mobile.less);
-  @import url(promo_mobile.less);
-  @import url(steps_mobile.less);
-  @import url(decision_mobile.less);
-  @import url(order_mobile.less);
-  @import url(sloganbox_mobile.less);
-  @import url(warranty_mobile.less);
-  @import url(next_mobile.less);
-  @import url(popup_mobile.less);
-}
-
-@media (max-width: @phone-max) {
   .desktop-only{
     display: none;
   }  
+
+  @import url(header_mobile.less);
+
 }
 
-@media (min-width: @laptop-min) {
-  .mobile-only{
-    display: none;
-  }  
-}
+// @media (max-width: @phone-max) {
+//   .desktop-only{
+//     display: none;
+//   }  
+// }
+
+// @media (min-width: @laptop-min) {
+//   .mobile-only{
+//     display: none;
+//   }  
+// }

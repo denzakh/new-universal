@@ -12,7 +12,11 @@
   <!-- build:css css/style.min.css -->
   <link rel="stylesheet" href="css/main.css">
   <!-- endbuild -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <!-- // Add the new slick-theme.css if you want the default styling -->
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
+
 <body>
   <header class="header">
     <div class="header__topline">
@@ -21,7 +25,7 @@
           <div class="header__nav-item"><a href="#nav1">выбор портрета</a></div>
           <div class="header__nav-item"><a href="#nav2">доставка</a></div>
           <div class="header__nav-item"><a href="#nav3">контакты</a></div>
-          <div class="header__nav-item  header__nav-item--tel">8&nbrs;800&nbrs;3334744</div>
+          <div class="header__nav-item  header__nav-item--tel">8 800 3334744</div>
         </nav>
       </div>
     </div>
@@ -58,13 +62,13 @@
         </div>
         <div class="gallery" id="nav1">
           <div class="container">
-            <div class="gallery__items">
-              <div class="gallery__items"><div class="gallery__number">1</div></div>
-              <div class="gallery__items"><div class="gallery__number">2</div></div>
-              <div class="gallery__items"><div class="gallery__number">3</div></div>
-              <div class="gallery__items"><div class="gallery__number">4</div></div>
-              <div class="gallery__items"><div class="gallery__number">5</div></div>
-              <div class="gallery__items"><div class="gallery__number">6</div></div>
+            <div class="gallery__list">
+              <div class="gallery__item"><div class="gallery__number">1</div></div>
+              <div class="gallery__item"><div class="gallery__number">2</div></div>
+              <div class="gallery__item"><div class="gallery__number">3</div></div>
+              <div class="gallery__item"><div class="gallery__number">4</div></div>
+              <div class="gallery__item"><div class="gallery__number">5</div></div>
+              <div class="gallery__item"><div class="gallery__number">6</div></div>
             </div>
             <div class="gallery__nav">
               <button class="gallery__btn no-btn gallery__btn--prev"></button>
@@ -114,7 +118,7 @@
         </div>
       </section>
       <section class="delivery" id="nav2">
-        <div class="conteiner">
+        <div class="container">
           <h2 class="delivery__title">Оставьте заявку сейчас и получите бесплатную доставку!</h2>
           <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
           <div class="delivery__client-contacts">
@@ -139,10 +143,12 @@
     </form>
 
     <section class="delivery-promo">
-      <div class="delivery-promo__textline">Бесплатная доставка при заказе сегодня до&nbrs;23:00</div>
-      <div class="delivery-promo__time">
-        <div class="delivery-promo__time-clock">00:00:00:00</div>
-        <div class="delivery-promo__time-hurry">Спешите!</div>
+      <div class="container">
+        <div class="delivery-promo__textline">Бесплатная доставка при заказе сегодня до 23:00</div>
+        <div class="delivery-promo__time">
+          <div class="delivery-promo__time-clock">00:00:00:00</div>
+          <div class="delivery-promo__time-hurry">Спешите!</div>
+        </div>
       </div>
     </section>
   </main>
@@ -157,5 +163,9 @@
   <!-- build:js js/main.min.js -->
   <script src="js/main.js"></script>
   <!-- endbuild -->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>

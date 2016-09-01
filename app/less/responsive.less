@@ -1,44 +1,57 @@
 @media screen and (min-width: @screen-lg1300) {
   .left-on-wide-screen{
     padding-right: 15vw;
-  }  
+  }
 }
 
+// стили десктопа
 @media screen and (min-width: @container-desktop-min) {
   .generate-columns(16);
   .container{
     min-width: @container-desktop-min;
     max-width: @container-desktop-max;
+    background-color: #0ff;
   }
   .phone-only{
     display: none;
-  } 
+  }
 
   @import url(header.less);
+  @import url(promo.less);
+  @import url(gallery.less);
+  @import url(order.less);
+  @import url(delivery.less);
+  @import url(delivery-promo.less);
 }
 
+// стили мобильного
 @media screen and (max-width: @phone-desktop-checkout) {
   .generate-columns(12);
   .container{
     min-width: @container-phone-min;
     max-width: @container-phone-max;
+    background-color: #ff0;
   }
   .desktop-only{
     display: none;
-  }  
+  }
 
-  @import url(header_mobile.less);
-
+  @import url(header-mobile.less);
+  @import url(promo-mobile.less);
+  @import url(gallery-mobile.less);
+  @import url(order-mobile.less);
+  @import url(delivery-mobile.less);
+  @import url(delivery-promo-mobile.less);
 }
 
-// @media (max-width: @phone-max) {
-//   .desktop-only{
-//     display: none;
-//   }  
-// }
 
-// @media (min-width: @laptop-min) {
-//   .mobile-only{
-//     display: none;
-//   }  
-// }
+
+
+
+
+
+
+
+
+
+

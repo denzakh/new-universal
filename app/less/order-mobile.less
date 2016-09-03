@@ -1,0 +1,117 @@
+
+.order__title {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 58px;
+  font-size: 41px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.order__subtitle {
+  padding-top: 32px;
+  padding-bottom: 34px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// табы
+.order__tabs {
+  .range;
+
+  & input {
+    display: none;
+  }
+}
+
+@media (min-width: 400px) {
+
+  .order__molding,
+  .order__printsize {
+    .range;
+  }
+
+  .order__molding-item {
+    .col-6;
+    padding-right: 0;
+  }
+
+  .order__printsize-item {
+    .col-4;
+    padding-right: 0;
+  }
+
+}
+
+.order__tab {
+  .flex-vertical-center;
+  flex-grow: 1;
+  text-align: center;
+  min-height: 133px;
+  border: 1px solid @c-light-grey-blue;
+  margin-bottom: 13px;
+}
+
+input:checked + .order__tab {
+  background-color: @c-light-blue;
+  border: 1px solid @c-gallery-border;
+  color: @c-sky-blue;
+}
+
+input:disabled + .order__tab {
+  color: @disabled;
+}
+
+.order__tab-header {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.order__tab-header--print {
+  font-size: 35px;
+}
+
+.order__tab-text {
+  font-size: 20px;
+}
+
+.order__signature {
+  position: relative;
+  display: block;
+  min-height: 85px;
+  padding: 20px;
+  padding-left: 85px;
+  font-size: 30px;
+  letter-spacing: 3.2px;
+  vertical-align: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 43px;
+    height: 43px;
+    border: 1px solid @c-gallery-border;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+}
+
+input:checked + .order__signature {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 47px;
+    height: 51px;
+    background: url(../img/signa.svg) no-repeat;
+    z-index: 2;
+  }
+}

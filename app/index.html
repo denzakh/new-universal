@@ -22,17 +22,19 @@
     <div class="header__topline">
       <div class="container">
         <nav class="header__nav">
-          <div class="header__nav-item"><a href="#nav1">выбор портрета</a></div>
-          <div class="header__nav-item"><a href="#nav2">доставка</a></div>
-          <div class="header__nav-item"><a href="#nav3">контакты</a></div>
-          <div class="header__nav-item  header__nav-item--tel">8 800 3334744</div>
+          <a href="#nav1" class="header__nav-item">выбор портрета</a>
+          <a href="#nav2" class="header__nav-item">доставка</a>
+          <a href="#nav3" class="header__nav-item">контакты</a>
+          <span class="header__nav-item  header__nav-item--tel">8 800 3334744</span>
         </nav>
       </div>
     </div>
     <div class="header__title-block">
       <div class="container">
-        <h1 class="header__title">Официальные портреты президента России с бесплатной доставкой
-        </h1>
+        <div class="header__title-wraper">
+          <h1 class="header__title">Официальные портреты президента России с бесплатной доставкой
+          </h1>
+        </div>
       </div>
     </div>
     <div class="header__advantage-block">
@@ -79,47 +81,55 @@
         <div class="order__tabs">
           <div class="container">
             <div class="order__subtitle">выберите вариант оформления и размер</div>
-            <div class="order__molding-tabs">
-              <input type="checkbox" name="molding" id="molding-1" checked>
-              <label for="molding-1" class="order__molding">
-                <span class="order__tab-header">фотобумага</span>
-                <span class="order__tab-text">под стеклом в багете</span>
-              </label>
-              <input type="checkbox" name="molding" id="molding-2">
-              <label for="molding-2" class="order__molding">
-                <span class="order__tab-header">хлопковый холст</span>
-                <span class="order__tab-text">в премиум багете</span>
-              </label>
+            <div class="order__molding">
+              <div class="order__molding-item">
+                <input type="radio" name="molding" id="molding-1" checked>
+                <label for="molding-1" class="order__tab ">
+                  <span class="order__tab-header">фотобумага</span>
+                  <span class="order__tab-text">под стеклом<br> в багете</span>
+                </label>
+              </div>
+              <div class="order__molding-item">
+                <input type="radio" name="molding" id="molding-2">
+                <label for="molding-2" class="order__tab ">
+                  <span class="order__tab-header">хлопковый холст</span>
+                  <span class="order__tab-text">в премиум<br> багете</span>
+                </label>
+              </div>
             </div>
-            <div class="order__printsize-tabs">
-              <input type="checkbox" name="printsize" id="printsize-a4" checked>
-              <label for="printsize-a4" class="order__printsize">
-                <span class="order__tab-header">А4</span>
-                <span class="order__tab-text">(21х30 см)</span>
-              </label>
-              <input type="checkbox" name="printsize" id="printsize-a3">
-              <label for="printsize-a3" class="order__printsize">
-                <span class="order__tab-header">А3</span>
-                <span class="order__tab-text">(30х42 см)</span>
-              </label>
-              <input type="checkbox" name="printsize" id="printsize-a2" disabled>
-              <label for="printsize-a2" class="order__printsize">
-                <span class="order__tab-header">А2</span>
-                <span class="order__tab-text">(42х60 см)</span>
-              </label>
+            <div class="order__printsize">
+              <div class="order__printsize-item">
+                <input type="radio" name="printsize" id="printsize-a4" checked>
+                <label for="printsize-a4" class="order__tab ">
+                  <span class="order__tab-header order__tab-header--print">А4</span>
+                  <span class="order__tab-text">(21х30 см)</span>
+                </label>
+              </div>
+              <div class="order__printsize-item">
+                <input type="radio" name="printsize" id="printsize-a3">
+                <label for="printsize-a3" class="order__tab ">
+                  <span class="order__tab-header order__tab-header--print">А3</span>
+                  <span class="order__tab-text">(30х42 см)</span>
+                </label>
+              </div>
+              <div class="order__printsize-item">
+                <input type="radio" name="printsize" id="printsize-a2" disabled>
+                <label for="printsize-a2" class="order__tab ">
+                  <span class="order__tab-header order__tab-header--print">А2</span>
+                  <span class="order__tab-text">(42х60 см)</span>
+                </label>
+              </div>
             </div>
             <div class="order__signature-tabs">
-              <label class="order__signature">
-                <input type="checkbox" name="signature" id="signature">
-                подпись Путина
-              </label>
+              <input type="checkbox" name="signature" id="signature">
+              <label for="signature" class="order__signature">подпись Путина</label>
             </div>
           </div>
         </div>
       </section>
       <section class="delivery" id="nav2">
         <div class="container">
-          <h2 class="delivery__title">Оставьте заявку сейчас и получите бесплатную доставку!</h2>
+          <h2 class="delivery__title">Оставьте заявку сейчас и&nbsp;получите бесплатную доставку!</h2>
           <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
           <div class="delivery__client-contacts">
             <input class="delivery__client delivery__client--email" type="client-email" name="client-email" id="client-email" placeholder="введите ваш email">
@@ -135,25 +145,24 @@
             </div>
             <div class="delivery__btn-block">
               <button class="delivery__btn-order btn">заказать портрет сейчас</button>
-              <div class="delivery__btn-subtext">Заявка Вас ни к чему не обязывает.</div>
+              <!-- <div class="delivery__btn-subtext">Заявка Вас ни к чему не обязывает.</div> -->
             </div>
           </div>
         </div>
       </section>
     </form>
 
-    <section class="delivery-promo">
-      <div class="container">
-        <div class="delivery-promo__textline">Бесплатная доставка при заказе сегодня до 23:00</div>
-        <div class="delivery-promo__time">
-          <div class="delivery-promo__time-clock">00:00:00:00</div>
-          <div class="delivery-promo__time-hurry">Спешите!</div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer" id="nav3"></footer>
+  <footer class="footer" id="nav3">
+    <div class="container">
+      <div class="footer__textline">Бесплатная доставка при заказе сегодня до 23:00</div>
+      <div class="footer__time">
+        <div class="footer__time-clock">00:00:00:00</div>
+        <div class="footer__time-hurry">Спешите!</div>
+      </div>
+    </div>
+  </footer>
 
   <!-- build:js js/vendor.js -->
   <!-- bower:js -->

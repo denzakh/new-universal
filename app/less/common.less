@@ -3,6 +3,8 @@
 }
 body{
   font-family: "Proxima Nova", Arial, sans-serif;
+  letter-spacing: 2px;
+  color: @c-dark-blue;
   // font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
@@ -20,4 +22,12 @@ input, button, select, textarea{
 // подсветка блоков
 * {
   outline: 1px solid #f08050;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

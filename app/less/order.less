@@ -1,0 +1,122 @@
+
+.order__title {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 58px;
+  font-size: 41px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.order__subtitle {
+  padding-top: 32px;
+  padding-bottom: 22px;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+// табы
+.order__tabs {
+  .range;
+
+  & input {
+    display: none;
+  }
+}
+
+.order__molding,
+.order__printsize {
+  // .range;
+  text-align: center;
+  font-size: 0;
+}
+
+.order__molding-item {
+  display: inline-block;
+  margin: 0 5px;
+  width: 357px;
+}
+
+.order__printsize-item {
+  display: inline-block;
+  margin-right: 1px;
+  width: 232px;
+}
+
+.order__tab {
+  .flex-vertical-center;
+  flex-grow: 1;
+  text-align: center;
+  min-height: 104px;
+  border: 1px solid @c-light-grey-blue;
+  margin-bottom: 1px;
+}
+
+input:checked + .order__tab {
+  // background-color: @c-light-blue;
+  border: 1px solid @c-gallery-border;
+  color: @c-sky-blue-desktop;
+}
+
+input:disabled + .order__tab {
+  color: @disabled;
+}
+
+.order__tab-header {
+  font-size: 27px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.order__tab-header--print {
+  font-size: 27px;
+}
+
+.order__tab-text {
+  font-size: 14px;
+}
+
+// подпись
+.order__signature {
+  position: relative;
+  display: block;
+  width: 690px;
+  margin: 0 auto;
+  min-height: 72px;
+  padding-top: 22px;
+  padding-left: 60px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  vertical-align: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 43px;
+    height: 43px;
+    border: 1px solid @c-gallery-border;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+}
+
+input:checked + .order__signature {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 47px;
+    height: 51px;
+    background: url(../img/signa.svg) no-repeat;
+    z-index: 2;
+  }
+}

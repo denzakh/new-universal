@@ -43,11 +43,51 @@
 // блок с ценой и кнопкой
 .delivery__order {
   .clearfix;
+  padding: 0 15px 17px;
 }
 
-.delivery__prace,
+.delivery__prace {
+  max-width: 265px;
+  float: left;
+  text-align: left;
+}
 .delivery__btn-block {
-  .col-6;
+  width: 320px;
+  text-align: right;
+  float: right;
 }
 
+.delivery__price-title {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.delivery__price-value {
+  font-size: 65px;
+  padding-top: 13px;
+  letter-spacing: 4px;
+  color: @c-sky-blue;
+}
+
+.delivery__price-free {
+  font-size: 14px;
+  color: #fa645a;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.delivery__btn-order {
+  width: 311px;
+  height: 134px;
+  border: none;
+  padding-top: 8px;
+  background-color: @c-button-order;
+  border-bottom: 8px solid @c-button-border;
+  border-radius: 12px;
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: @c-sky-blue;
+}
 

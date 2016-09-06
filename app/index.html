@@ -17,7 +17,8 @@
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 
-<body>
+
+<body class="seo">  <!-- target / seo -->
   <header class="header">
     <div class="header__topline">
       <div class="container">
@@ -129,7 +130,9 @@
       </section>
       <section class="delivery" id="nav2">
         <div class="container">
-          <h2 class="delivery__title">Оставьте заявку сейчас и&nbsp;получите бесплатную доставку!</h2>
+          <h2 class="delivery__title  delivery__title--main">Оставьте заявку сейчас и&nbsp;получите бесплатную доставку!</h2>
+          <h2 class="delivery__title  delivery__title--target">Дарим 500 рублей при заказе от 2000 рублей!</h2>
+          <h2 class="delivery__title  delivery__title--seo">Забронируйте бесплатную доставку сейчас!</h2>
           <div class="delivery__subtitle">Наш менеджер свяжется с Вами</div>
           <div class="delivery__client-contacts">
             <input class="delivery__client delivery__client--email" type="client-email" name="client-email" id="client-email" placeholder="введите ваш email">
@@ -138,13 +141,21 @@
           <div class="delivery__order">
             <div class="delivery__prace">
               <div class="delivery__price-title">Цена:</div>
-              <div class="delivery__price-value">1750
+              <div class="delivery__price-old">
+                <span class="delivery__price-old-price">2750</span>
+                <span class="delivery__price-old-rub">&#8381;</span>
+              </div>
+              <div class="delivery__price-value delivery__price-value--main">1750
+                <span class="delivery__price-rub">&#8381;</span>
+              </div>
+              <div class="delivery__price-value  delivery__price-value--target">2250
                 <span class="delivery__price-rub">&#8381;</span>
               </div>
               <div class="delivery__price-free"><sup>*</sup> доставка бесплатно</div>
             </div>
             <div class="delivery__btn-block">
-              <button class="delivery__btn-order btn">заказать портрет сейчас</button>
+              <button class="delivery__btn-order delivery__btn-order--main">заказать портрет сейчас</button>
+              <button class="delivery__btn-order delivery__btn-order--seo">заказать бесплатную доставку</button>
               <div class="delivery__btn-subtext desktop-only">Заявка Вас ни к чему не обязывает.</div>
             </div>
           </div>
@@ -153,13 +164,19 @@
     </form>
   </main>
 
-  <footer class="footer" id="nav3">
+  <footer class="footer footer--main" >
     <div class="container">
       <div class="footer__textline">Бесплатная доставка при заказе сегодня до 23:00</div>
       <div class="footer__time">
         <div class="footer__time-clock">00:00:00:00</div>
         <div class="footer__time-hurry">Спешите!</div>
       </div>
+    </div>
+  </footer>
+  <footer  class="footer footer--target" >
+    <div class="container">
+      <div class="footer__togever">Вместе с Путиным!</div>
+      <div class="footer__togever">Вместе с Россией!</div>
     </div>
   </footer>
 

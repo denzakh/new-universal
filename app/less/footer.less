@@ -1,0 +1,77 @@
+.footer {
+  background-color: @c-very-dark-blue;
+  color: @c-light-blue;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 35px 0 35px;
+}
+
+.footer--target {
+  display: none;
+}
+
+.footer__textline {
+  font-size: 27px;
+  letter-spacing: 3px;
+  margin: 0 auto;
+}
+
+.footer__time{
+  font-size: 67px;
+  padding-top: 12px;
+  letter-spacing: 6px;
+  max-width: 890px;
+  margin: 0 auto;
+  .clearfix;
+
+}
+
+.footer__time-clock {
+  letter-spacing: 6px;
+  width: 470px;
+  float: left;
+  text-align: left;
+}
+
+.footer__time-hurry {
+  width: 405px;
+  float: right;
+  text-align: right;
+  position: relative;
+
+  &:before {
+    .pseudo-content;
+    width: 20px;
+    height: 40px;
+    top: 16px;
+    left: -20px;
+    background-color: #ffeb3b;
+  }
+
+  &:after {
+    .pseudo-content;
+    width: 0;
+    height: 0;
+    top: 16px;
+    left: -1px;
+    border: 20px solid transparent;
+    border-left: 20px solid #ffeb3b;
+  }
+}
+
+// target
+
+.target .footer--main {
+  display: none;
+}
+
+.target .footer--target {
+  display: block;
+}
+
+.target .footer__togever {
+  font-size: 67px;
+  letter-spacing: 6px;
+}
+
+

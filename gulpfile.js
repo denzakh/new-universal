@@ -16,10 +16,11 @@ var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var ftp = require('gulp-ftp'); // если неободимо sftp соединение - заменить gulp-ftp на gulp-sftp(см. package.json)
 var realFavicon = require ('gulp-real-favicon');
+var plumber = require('gulp-plumber');
 var fs = require('fs');
 
 
-// Очищаем папку dist 
+// Очищаем папку dist
 gulp.task('clean', function () {
   return gulp.src('dist', {read: false})
   .pipe(clean());
@@ -32,7 +33,7 @@ gulp.task('fonts', ['clean'], function () {
 });
 
 
-// минифицируем графику и сохраняем в папку для 
+// минифицируем графику и сохраняем в папку для
 // продакшена, c предварительно добавленными шрифтами
 gulp.task('image', ['fonts'], function () {
   return gulp.src('app/img/**')
@@ -44,6 +45,7 @@ gulp.task('image', ['fonts'], function () {
 gulp.task('build', ['image'], function () {
   var assets = useref.assets();
   return gulp.src('app/*.html')
+  .pipe(plumber()) // plumber
   .pipe(assets)
   .pipe(gulpif('*.js', uglify()))
   .pipe(gulpif('*.css', minifyCss()))
@@ -89,7 +91,7 @@ gulp.task('sprite', function () {
   // .pipe(imagemin()) //графика будет минифицирована при сборке на продакшн
   .pipe(gulp.dest('app/img/'))
   .pipe(notify("Sprite rebuild!"));;
-  
+
   return spriteData.css
   .pipe(gulp.dest('app/less/'));
 });
@@ -131,7 +133,7 @@ gulp.task('bower', function () {
   .pipe(gulp.dest('app'));
 });
 
-// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css, 
+// отслеживаем изменения в проекте - less ясен перекомпилирует по новой css,
 // bower - добавляет в html пути к новым библиотекам
 // sprite отслеживает появление новой графики для переклеивания спрайта
 gulp.task('watch', function (){
@@ -147,12 +149,12 @@ gulp.task('default', ['webserver', 'sprite', 'less', 'bootstrapCompil', 'bower',
 // File where the favicon markups are stored
 var FAVICON_DATA_FILE = 'faviconData.json';
 
-// Замените TODO: Path to your master picture на путь до вашего исходника 
-// из которой будут генерироваться иконки. 
+// Замените TODO: Path to your master picture на путь до вашего исходника
+// из которой будут генерироваться иконки.
 // Например, assets/images/master_picture.png
 
-// Замените TODO: Path to the directory where to store the icons 
-// на путь до директории где будут лежать ваши сгенерированые иконки. 
+// Замените TODO: Path to the directory where to store the icons
+// на путь до директории где будут лежать ваши сгенерированые иконки.
 // Например, dist/images/icons
 
 
@@ -201,15 +203,15 @@ gulp.task('generate-favicon', function(done) {
 
 
 // Вставка в html
-// Inject the favicon markups in your HTML pages. You should run 
-// this task whenever you modify a page. You can keep this task 
+// Inject the favicon markups in your HTML pages. You should run
+// this task whenever you modify a page. You can keep this task
 // as is or refactor your existing HTML pipeline.
-// 
-// // Замените TODO: List of the HTML files where to inject favicon markups 
-// на путь до файлов в которые будет вставлен код внедрения favicon. 
+//
+// // Замените TODO: List of the HTML files where to inject favicon markups
+// на путь до файлов в которые будет вставлен код внедрения favicon.
 // Например, ['dist/*.html', 'dist/misc/*.html']
 
-// Замените TODO: Path to the directory where to store the HTML files 
+// Замените TODO: Path to the directory where to store the HTML files
 // на путь до директории, где хранятся ваши HTML файлы.
 gulp.task('inject-favicon-markups', function() {
   gulp.src([ 'app/*.html' ])
@@ -219,7 +221,7 @@ gulp.task('inject-favicon-markups', function() {
 
 // Check for updates on RealFaviconGenerator (think: Apple has just
 // released a new Touch icon along with the latest version of iOS).
-// Run this task from time to time. Ideally, make it part of your 
+// Run this task from time to time. Ideally, make it part of your
 // continuous integration system.
 gulp.task('check-for-favicon-update', function(done) {
   var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;

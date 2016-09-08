@@ -510,16 +510,6 @@ textarea {
     text-transform: uppercase;
     text-align: center;
   }
-  .order__tabs {
-    margin-left: -6px;
-    margin-right: -6px;
-  }
-  .order__tabs:after {
-    content: '';
-    display: block;
-    overflow: hidden;
-    clear: both;
-  }
   .order__tabs input {
     display: none;
   }
@@ -1009,16 +999,6 @@ textarea {
     font-size: 18px;
     text-transform: uppercase;
     text-align: center;
-  }
-  .order__tabs {
-    margin-left: -6px;
-    margin-right: -6px;
-  }
-  .order__tabs:after {
-    content: '';
-    display: block;
-    overflow: hidden;
-    clear: both;
   }
   .order__tabs input {
     display: none;

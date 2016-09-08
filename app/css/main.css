@@ -734,6 +734,7 @@ textarea {
     display: block;
     font-size: 35px;
     color: #bdbdbd;
+    text-decoration: line-through;
   }
   .delivery__price-value--target {
     display: none;

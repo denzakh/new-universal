@@ -75,6 +75,40 @@
   overflow: hidden;
   clear: both;
 }
+.gallery__nav {
+  position: relative;
+}
+.gallery__item {
+  position: relative;
+  margin: 0 1px;
+  opacity: 0.5;
+}
+.gallery_number-photo {
+  display: none;
+}
+.slick-current {
+  opacity: 1;
+}
+.slick-current:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: inset 0 0 0 9px #ffeb3b;
+  box-shadow: inset 0 0 0 9px #ffeb3b;
+}
+.slick-current .gallery_number-photo {
+  display: block;
+  position: absolute;
+  font-size: 90px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #ffff00;
+  z-index: 2;
+}
 /* Slider */
 .slick-slider {
   position: relative;
@@ -177,8 +211,8 @@
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 50px;
+  width: 30px;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
@@ -197,7 +231,6 @@
 .slick-prev:focus,
 .slick-next:focus {
   outline: none;
-  background: transparent;
   color: transparent;
 }
 .slick-prev:hover:before,
@@ -210,41 +243,19 @@
 .slick-next.slick-disabled:before {
   opacity: 0.25;
 }
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  color: white;
-  opacity: 0.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .slick-prev {
-  left: -25px;
+  left: 5px;
+  background: no-repeat url(../img/arrow-prev.svg);
 }
-.slick-prev[dir="rtl"] {
-  left: auto;
-  right: -25px;
-}
-.slick-prev:before {
-  content: "←";
-}
-.slick-prev:before[dir="rtl"] {
-  content: "→";
+.slick-prev:hover {
+  background: no-repeat url(../img/arrow-prev-active.svg);
 }
 .slick-next {
-  right: -25px;
+  right: 5px;
+  background: no-repeat url(../img/arrow-next.svg);
 }
-.slick-next[dir="rtl"] {
-  left: -25px;
-  right: auto;
-}
-.slick-next:before {
-  content: "→";
-}
-.slick-next:before[dir="rtl"] {
-  content: "←";
+.slick-next:hover {
+  background: no-repeat url(../img/arrow-next-active.svg);
 }
 /* Dots */
 .slick-dotted .slick-slider {
@@ -333,9 +344,6 @@ button,
 select,
 textarea {
   outline: none;
-}
-* {
-  outline: 1px solid #f08050;
 }
 .clearfix:after {
   content: "";
@@ -753,6 +761,9 @@ textarea {
   .seo .delivery__title--seo {
     display: block;
   }
+  .seo .delivery__title--main {
+    display: none;
+  }
   .delivery__btn-order--main {
     display: block;
   }
@@ -771,9 +782,6 @@ textarea {
     text-transform: uppercase;
     text-align: center;
     padding: 35px 0 35px;
-  }
-  .footer--target {
-    display: none;
   }
   .footer__textline {
     font-size: 27px;
@@ -822,6 +830,9 @@ textarea {
     left: -1px;
     border: 20px solid transparent;
     border-left: 20px solid #ffeb3b;
+  }
+  .footer--target {
+    display: none;
   }
   .target .footer--main {
     display: none;
@@ -1171,11 +1182,52 @@ textarea {
     letter-spacing: 3px;
     color: #304ffe;
   }
+  .target .delivery__title--main {
+    display: none;
+  }
+  .delivery__title--target {
+    display: none;
+  }
+  .target .delivery__title--target {
+    display: block;
+  }
+  .delivery__price-old {
+    display: none;
+  }
+  .target .delivery__price-old {
+    display: block;
+    font-size: 35px;
+    color: #bdbdbd;
+    text-decoration: line-through;
+  }
+  .delivery__price-value--target {
+    display: none;
+  }
+  .target .delivery__price-value--main {
+    display: none;
+  }
+  .target .delivery__price-value--target {
+    display: block;
+    font-size: 65px;
+    padding-top: 0;
+  }
+  .target .delivery__price-free {
+    display: none;
+  }
+  .target .delivery__btn-subtext {
+    display: none;
+  }
+  .target .delivery__btn-block {
+    padding-bottom: 0;
+  }
   .delivery__title--seo {
     display: none;
   }
   .seo .delivery__title--seo {
     display: block;
+  }
+  .seo .delivery__title--main {
+    display: none;
   }
   .delivery__btn-order--main {
     display: block;
@@ -1212,6 +1264,9 @@ textarea {
   .footer__time-clock {
     letter-spacing: 3px;
   }
+  .footer--target {
+    display: none;
+  }
   .target .footer--main {
     display: none;
   }
@@ -1219,7 +1274,7 @@ textarea {
     display: block;
   }
   .target .footer__togever {
-    font-size: 67px;
+    font-size: 47px;
     letter-spacing: 6px;
   }
 }
